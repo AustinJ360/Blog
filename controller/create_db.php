@@ -14,7 +14,7 @@ if(!$exists){
 //sends commands to the database
 	$query = $connection->query("CREATE DATABASE $database");//database string
 		if($query){
-			echo "Successfully created database:" . $database;
+			echo "<p>Successfully created database:" . $database . "</p>";
 		}
 }
 else{
@@ -28,7 +28,10 @@ $query = $connection->query("CREATE TABLE posts ("
 	         . "PRIMARY KEY (id))");
 
 if($query){
-	echo"Successfully created table: post"//check if query is created
+	echo"Successfully created table: post";//check if query is created
+}
+else{
+	echo "connection->error"; //check for error
 }
 $connection->close();
 
