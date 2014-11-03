@@ -22,16 +22,16 @@ else{
 }
 //database already exist 
 $query = $connection->query("CREATE TABLE posts ("
-	         . "id int(11) NOT NULL_INCREMENT,"//blog post unique id
-	         . "title varchar(255) NOT NULL"
-	         . "post text NOT NULL"
+	         . "id int(11) NOT NULL AUTO_INCREMENT,"//blog post unique id
+	         . "title varchar(255) NOT NULL,"
+	         . "post text NOT NULL,"
 	         . "PRIMARY KEY (id))");
 
 if($query){
 	echo"Successfully created table: post";//check if query is created
 }
 else{
-	echo "connection->error"; //check for error
+	echo "<p>$connection->error</p>"; //check for error
 }
 $connection->close();
 
