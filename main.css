@@ -5,6 +5,12 @@ body
   font-family: "Open Sans", arial;
   background: silver;
 }
+@media(max-width: 320px){
+  body{
+    background-color:url(http://www.fullhdwallpaperz.com/wallpaper/1401772874.jpg);
+  }
+}
+
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
