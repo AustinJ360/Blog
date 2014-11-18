@@ -9,11 +9,24 @@ class Database{//Classes are a convenient way to group data and functionality.Yo
  private $password;
  private $database;
 
- public function __construct($host, $username, $password, $database){
+ public function __construct($host, $username, $password, $database){//database class
  	$this->host = $host;//access to all global variables
  	$this->username = $username;
  	$this->password = $password;
  	$this->database = $database;
  }
+
+ public function openConnection() {
+
+ }
+
+ public function closeConnection() {
+
+ }
+
+ public function query($string) {
+
+ }
+ 
 }
 ?> 
