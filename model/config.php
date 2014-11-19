@@ -8,5 +8,6 @@ $username = "root";//merged database with config
 $password = "root";
 $database = "blog_db";
 
+$connection = new Database($host, $username, $password, $database);
 
 ?>

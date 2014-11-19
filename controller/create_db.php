@@ -1,7 +1,5 @@
 <?php
 require_once(__DIR__ . "/../model/config.php");//changed database to config from refactoring
-//find a file once
-$connection = new mysqli($host, $username, $password);
 //checks connection error
 if($connection->connect_error) {
 

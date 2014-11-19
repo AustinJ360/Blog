@@ -17,16 +17,29 @@ class Database{//Classes are a convenient way to group data and functionality.Yo
  }
 
  public function openConnection() {
+ 	$this->connection = new mysqli($this->host, $this->username,$this->password,$this->database);//new connection , establish connection
 
+ 	if($connection->connect_error) {//checking whether or not we have a connection error
+
+	die("Error:" . $this->connection->connect_error);
+	}
  }
 
  public function closeConnection() {
-
+ 	if(isset($this->connection))){//checking if the variable has bin set or not
+		$this->connection->close();//checking connection
+ 	}
  }
 
  public function query($string) {
+ 	$this->openConnection();
 
+ 	$query = $this->connection->query($string);//refactored code useing variable
+
+ 	$this->closeConnection();
+
+ 	return $query();
  }
- 
+
 }
 ?> 
