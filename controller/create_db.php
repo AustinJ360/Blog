@@ -1,23 +1,6 @@
 <?php
 require_once(__DIR__ . "/../model/config.php");//changed database to config from refactoring
-//checks connection error
-if($connection->connect_error) {
-
-	die("Error:" . $connection->connect_error);
-}
-//checks if there is database
-	$exists = $connection->select_db($database);
-//destroys the program if there is a connection error
-if(!$exists){
-//sends commands to the database
-	$query = $connection->query("CREATE DATABASE $database");//database string
-		if($query){
-			echo "<p>Successfully created database:" . $database . "</p>";
-		}
-}
-else{
-	echo "Database already exists";
-}
+//find a file once
 //database already exist 
 $query = $connection->query("CREATE TABLE posts ("
 	         . "id int(11) NOT NULL AUTO_INCREMENT,"//blog post unique id
@@ -26,11 +9,16 @@ $query = $connection->query("CREATE TABLE posts ("
 	         . "PRIMARY KEY (id))");
 
 if($query){
+
 	echo"Successfully created table: post";//check if query is created
+
 }
 else{
+
 	echo "<p>$connection->error</p>"; //check for error
+
 }
+
 $connection->close();
 
 ?>

@@ -15,12 +15,14 @@ require_once(__DIR__ . "/../model/config.php");
    		<label for ="post">Post: </label>
    		<textarea name="post"></textarea>
    		<?php
-//"text area" to type anything in text box
+         //"text area" to type anything in text box
    		?>
    </div>
 
    <div>
+
    <button type="submit">Submit</button>
+   
    </div><?php//to submit text?>
 
 </form>
