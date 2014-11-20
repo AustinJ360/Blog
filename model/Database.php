@@ -8,6 +8,7 @@ class Database{//Classes are a convenient way to group data and functionality.Yo
  private $username;
  private $password;
  private $database;
+ public $exist;
 
  public function __construct($host, $username, $password, $database){//database class
  	$this->host = $host;//access to all global variables
@@ -28,7 +29,7 @@ class Database{//Classes are a convenient way to group data and functionality.Yo
 if(!$exists){
 		//sends commands to the database
 		$query = $this->connection->query("CREATE DATABASE $database");//database string
-		
+
 		if($query){
 
 			echo "<p>Successfully created database:" . $database . "</p>";
@@ -61,7 +62,12 @@ else{
  public function query($string) {
  	$this->openConnection();
 
- 	$query = $this->connection->query($string);//refactored code using substitute lines of text in variable. 
+ 	$query = $this->connection->query($string);//refactored code using substitute lines of text in variable.
+
+ 	if(!$query){
+ 		$this->error = $this->connection->error; 
+
+ 	} 
 
  	$this->closeConnection();
 
