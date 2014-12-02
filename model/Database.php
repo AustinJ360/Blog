@@ -46,7 +46,7 @@ else{
  public function openConnection() {
  	$this->connection = new mysqli($this->host, $this->username,$this->password,$this->database);//new connection , establish connection
 
- 	if($connection->connect_error) {//checking whether or not we have a connection error
+ 	if($this->connection->connect_error) {//checking whether or not we have a connection error
 
 	die("Error:" . $this->connection->connect_error);
 
@@ -54,7 +54,7 @@ else{
  }
 
  public function closeConnection() {
- 		if(isset($this->connection))){//checking if the variable has bin set or not
+ 		if(isset($this->connection)){//checking if the variable has bin set or not
 			$this->connection->close();//checking connection
  		}
  }
@@ -71,7 +71,7 @@ else{
 
  	$this->closeConnection();
 
- 	return $query();//return results.
+ 	return $query;//return results.
 
 
  	}
