@@ -11,6 +11,7 @@
 	   require_once(__DIR__ . "/controller/create_db.php");//look for file
 	   require_once(__DIR__ . "/view/footer.php");//checks for file
 	   require_once(__DIR__ . "/view/navigation.php");//looks for file
+	   require_once(__DIR__ . "/controller/read-posts.php");
 	?>
 	</body>
 </html>
