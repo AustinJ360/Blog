@@ -1,4 +1,5 @@
  <link rel="stylesheet" type="text/css" href="main.css">
+ <a href="http://localhost/Blog">< Back</a>
 <?php
 
 	require_once(__DIR__ . "/view/header.php"); //requires header php in view folder

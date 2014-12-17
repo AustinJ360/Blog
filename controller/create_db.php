@@ -11,7 +11,7 @@ $query = $_SESSION["connection"]->query("CREATE TABLE posts ("
 
 if($query){
 
-	echo"<p>Successfully created table: post</p>";//check if query is created
+	//echo"<p>Successfully created table: post</p>";//check if query is created
 
 }
 else{
@@ -29,7 +29,7 @@ $query = $_SESSION["connection"]->query("CREATE TABLE users ("//query able to se
 		. "PRIMARY KEY (id))");
 
 if($query){
-  	echo"<p>Successfully created table: users</p>";
+  	//echo"<p>Successfully created table: users</p>";
 }
 else{
 	echo "<p>" . $_SESSION["connection"]->error . "</p>";

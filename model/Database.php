@@ -32,13 +32,13 @@ if(!$exists){
 
 		if($query){
 
-			echo "<p>Successfully created database:" . $database . "</p>";
+			//echo "<p>Successfully created database:" . $database . "</p>";
 
 		}
 }
 else{
 
-	echo "Database already exists";
+	//echo "Database already exists";
 
 }
  }

@@ -2,8 +2,6 @@
 <link rel="stylesheet" type="text/css" href="duke.css">
 <html>
 <body>
-<header>Life in the World</header>
-
 </form>
 <?php //creates a play so title and post can be sent to. 
 require_once(__DIR__ . "/../model/config.php"); //so we have access, changed databse to config from refactoring
@@ -16,7 +14,7 @@ $time = new DateTime('America/Los_Angeles');
 $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");//able to insert information
 
 if ($query) {
-	echo "<p>Successfully inserted post : $title</p>";//tells if the var title was sent successfully 
+	//echo "<p>Successfully inserted post : $title</p>";//tells if the var title was sent successfully 
 	echo "Posted on:" . $date->format("m/d/y") . " at " . $time->format("g:i");//post time and date after posting 
 }
 else{
